@@ -142,4 +142,5 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
       return "success";
 }
 
-triangle (7, "leg", 8, "hypotenuse")
+console.log('triangle (7, "leg", 8, "hypotenuse")', "\n");
+triangle (7, "leg", 8, "hypotenuse");
