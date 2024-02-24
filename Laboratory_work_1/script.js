@@ -11,6 +11,7 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
     const isValidValue = (val) => val > 0 && typeof val === "number";
     const toDegrees = (angle) => angle * (180 / Math.PI);
     const toRadians = (angle) => angle * (Math.PI / 180);
+    const isValidTriangle = (a, b, c) => a + b > c && a + c > b && c + b > a;
 
     let a, b, c, alpha, beta;
 
@@ -131,6 +132,9 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
             b = Math.sqrt(c * c - a * a);
             break;
         }
+        if (!isValidTriangle(a, b, c)) {
+            return "Error, any side of triangle should be < than sum of other 2 sides";
+        }
 
     console.log(
         'triangle (7, "leg", 8, "hypotenuse")', "\n",
@@ -141,6 +145,3 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
         "beta:", beta );
       return "success";
 }
-
-console.log('triangle (7, "leg", 8, "hypotenuse")', "\n");
-triangle (7, "leg", 8, "hypotenuse");
