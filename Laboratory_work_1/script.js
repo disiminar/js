@@ -12,6 +12,10 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
     const toDegrees = (angle) => angle * (180 / Math.PI);
     const toRadians = (angle) => angle * (Math.PI / 180);
     const isValidTriangle = (a, b, c) => a + b > c && a + c > b && c + b > a;
+    const isValidAngle = (angle) => angle < 90;
+    const isAngle = (type) => anglesTypes.includes(type);
+    const isLeg = (type) => type === "leg";
+    const isHypotenuse = (type) => type === "hypotenuse";
 
     let a, b, c, alpha, beta;
 
@@ -32,6 +36,22 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
         );
         return "failed";
     }
+
+    if (isAngle(type1) && isAngle(type2)) {
+        console.log(
+          "Invalid input - 2 angles"
+        );
+        return "failed";
+      }
+
+      if (
+        (isAngle(type1) && !isValidAngle(val1)) ||
+        (isAngle(type2) && !isValidAngle(val2))
+      ) {
+        return "Invalid input - angle should be < 90";
+      }
+
+
 
     switch (type1) {
         case "leg":
@@ -135,6 +155,10 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
         if (!isValidTriangle(a, b, c)) {
             return "Error, any side of triangle should be < than sum of other 2 sides";
         }
+
+        if (!isValidAngle(alpha) || !isValidAngle(beta)) {
+            return "The angles of the triangle must be <90";
+          }
 
     console.log(
         'triangle (7, "leg", 8, "hypotenuse")', "\n",
