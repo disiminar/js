@@ -30,6 +30,30 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
         return "failed";
     }
 
+    switch (type1) {
+        case "leg":
+          //
+          switch (type2) {
+            case "hypotenuse":
+                //
+                break;
+            case "leg":
+                // 
+                break;
+            case "adjacent angle":
+                //
+                break;
+            case "opposite angle":
+                //
+                break;
+            default:
+                console.log("Minor spelling mistake o_0");
+                return "failed";        
+          }
+        //
+        break;
+         
+        }
 
     console.log(
         'triangle (7, "leg", 8, "hypotenuse")', "\n",
