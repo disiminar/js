@@ -52,7 +52,52 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
           }
         //
         break;
-         
+        case "hypotenuse":
+            //
+            switch (type2) {
+                case "leg":
+                    //
+                    break;
+                case "angle":
+                    //
+                    break;
+            default:
+            console.log("Minor spelling mistake o_0");
+            return "failed";
+            } 
+        //
+        break;
+        case "adjacent angle":
+            //
+            switch (type2) {
+                case "leg":
+                    //
+                    break;
+                case "hypotenuse":
+                    //
+                    break;
+                default:
+                    console.log("Minor spelling mistake o_0");
+                    return "failed";    
+            }
+        break;
+        case "opposite angle":
+            //
+            switch (type2) {
+                case "leg":
+                    //
+                    break;
+                case "hypotenuse":
+                    //
+                    break;
+                default:
+                    console.log("Minor spelling mistake o_0");
+                    return "failed";
+            }
+            break;
+        case "angle":
+            //
+            break;
         }
 
     console.log(
