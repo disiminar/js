@@ -51,7 +51,12 @@ function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
         return "Invalid input - angle should be < 90";
       }
 
-
+      if (
+        (isHypotenuse(type1) && isLeg(type2) && val1 - val2 <= 0) ||
+        (isHypotenuse(type2) && isLeg(type1) && val2 - val1 <= 0)
+      ) {
+        return "Must be hypotenuse > leg";
+      }
 
     switch (type1) {
         case "leg":
