@@ -1,11 +1,6 @@
 function triangle(val1 = 3, type1 = "leg", val2 = 4, type2 = "leg") {
-    const validTypes = [
-      "leg",
-      "hypotenuse",
-      "adjacent angle",
-      "opposite angle",
-      "angle",
-    ];
+    const validTypes = ["leg", "hypotenuse", "adjacent angle", "opposite angle", "angle"];
+    const anglesTypes = ["adjacent angle", "opposite angle", "angle"];
 
     const isValidType = (type) => validTypes.includes(type);
     const isValidValue = (val) => val > 0 && typeof val === "number";
