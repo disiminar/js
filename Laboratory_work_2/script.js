@@ -9,4 +9,11 @@ for (let i = 0; i < names.length; i++) {
   } 
 }
 
-console.log('\n', "another way of name selection -  ", '\n')
+console.log('\n', "another way of name selection - if the last letter of name is 'a' - goodbye :(", '\n')
+for (let i = 0; i < names.length; i++) {
+  if (names[i].toLowerCase().slice(-1) === "a") {
+    $SpeakGoodBye.speak(names[i]);
+  } else {
+    $SpeakHello.speak(names[i]);
+  } 
+}
