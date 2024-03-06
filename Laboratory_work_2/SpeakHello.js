@@ -1,7 +1,9 @@
-var speakWord = "Hello";
+(function (global) {
+  const SpeakHello = {};
 
-
-function speak(name) {
-  console.log(speakWord + " " + name);
-}
-
+  const speakWord = "Hello";
+  SpeakHello.speak = function (name) {
+    console.log(speakWord + " " + name);
+  };
+  global.$SpeakHello = SpeakHello;
+})(window);
