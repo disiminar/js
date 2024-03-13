@@ -279,3 +279,29 @@ function PiMultiplier(number) {
   console.log("(2/3)*pi = ", Pi2_3());
   const halfPi = PiMultiplier(1 / 2);
   console.log("pi/2 = ", halfPi());
+
+  function Painter(color) {
+    return function (object) {
+      if (object.hasOwnProperty("type")) {
+        console.log(
+          "Painting object with type " + object.type + " in " + color + " color"
+        );
+      } else {
+        console.log("No 'type' property occurred!");
+      }
+    };
+  }
+
+const PaintBlue = Painter("blue");
+const PaintRed = Painter("red");
+const PaintYellow = Painter("yellow");
+
+const obj1 = {
+    maxSpeed: 220,
+    type: "Truck",
+    color: "Green",
+  };
+  console.log("     Painting obj1");
+  PaintBlue(obj1);
+  PaintRed(obj1);
+  PaintYellow(obj1);
