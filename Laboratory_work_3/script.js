@@ -44,3 +44,11 @@ function Truck(color, weight, avgSpeed, brand, model) {
     this.brand = brand;
     this.model = model;
 }
+
+Truck.prototype.AssignDriver = function (name, nightDriving, experience) {
+    this.driver = {
+      name: name,
+      nightDriving: nightDriving,
+      experience: experience,
+    };
+  };
