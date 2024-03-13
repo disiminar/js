@@ -33,6 +33,14 @@ car1.drive = function () {
   };
   console.log("usage -> car2.drive()");
   car2.drive();
+
 //
 //
 
+function Truck(color, weight, avgSpeed, brand, model) {
+    this.color = color;
+    this.weight = weight;
+    this.avgSpeed = avgSpeed;
+    this.brand = brand;
+    this.model = model;
+}
