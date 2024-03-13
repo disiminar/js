@@ -123,6 +123,18 @@ class Rectangle extends Square {
         super(a);
         this.b = b;
     }
+    get a() {
+        return this.a;
+    }
+    set a(p) {
+        this.a = p;
+    }
+    get b(){
+        return this.b;
+    }
+    set b(p) {
+        this.b = p;
+    }
 
     static help() {
     console.log(
@@ -158,30 +170,6 @@ class Rhombus extends Square {
       super(a);
       this.alpha = alpha;
       this.beta = beta;
-    }
-
-    get a() {
-      return this._a;
-    }
-
-    set a(p) {
-      this._a = p;
-    }
-
-    get alpha() {
-      return this._alpha;
-    }
-
-    set alpha(alpha) {
-      this._alpha = alpha;
-    }
-
-    get beta() {
-      return this._beta;
-    }
-
-    set beta(beta) {
-      this._beta = beta;
     }
 
     static help() {
@@ -256,3 +244,18 @@ class Rhombus extends Square {
   }
 
 
+//
+
+Square.help();
+Rectangle.help();
+Rhombus.help();
+Parallelogram.help();
+
+const squareObject = new Square(8);
+const rectangleObject = new Rectangle(8, 13);
+const rhombusObject = new Rhombus(8, 120, 60);
+const parallelogramObject = new Parallelogram(8, 9, 100, 80);
+squareObject.info();
+rectangleObject.info();
+rhombusObject.info();
+parallelogramObject.info();
