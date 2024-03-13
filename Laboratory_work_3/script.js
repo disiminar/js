@@ -252,3 +252,14 @@ squareObject.info();
 rectangleObject.info();
 rhombusObject.info();
 parallelogramObject.info();
+
+function Triangular(a = 3, b = 4, c = 5) {
+    return { a, b, c };
+}
+
+const triangle1 = Triangular();
+console.log(triangle1);
+const triangle2 = Triangular(6, 7, 8);
+console.log(triangle2);
+const triangle3 = Triangular(9, 10, 11);
+console.log(triangle3);
