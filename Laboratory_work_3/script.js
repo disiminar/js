@@ -102,18 +102,11 @@ class Square {
     }
     info() {
         console.log(
-          "Square Information:",
-          "\n",
-          "- Side lengths: ",
-          this.a,
-          "\n",
-          "- All angles = 90 degrees",
-          "\n",
-          "- Perimeter: ",
-          4 * this.a,
-          "\n",
-          "- Area: ",
-          this.a * this.a
+          "Square Information:","\n",
+          "1) Side lengths: ",this.a,"\n",
+          "2) All angles = 90 degrees","\n",
+          "3) Perimeter: ", 4 * this.a, "\n",
+          "4) Area: ",this.a * this.a
         );
       } 
 }
