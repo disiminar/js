@@ -151,5 +151,66 @@ class Rectangle extends Square {
             "5) Area: ", this.a * this.b
         );
       }
-
 }
+
+class Rhombus extends Square {
+    constructor(a, alpha, beta) {
+      super(a);
+      this.alpha = alpha;
+      this.beta = beta;
+    }
+
+    get a() {
+      return this._a;
+    }
+
+    set a(p) {
+      this._a = p;
+    }
+
+    get alpha() {
+      return this._alpha;
+    }
+
+    set alpha(alpha) {
+      this._alpha = alpha;
+    }
+
+    get beta() {
+      return this._beta;
+    }
+
+    set beta(beta) {
+      this._beta = beta;
+    }
+
+    static help() {
+      console.log(
+        "All sides & opposite angles equal", "\n",
+        "Properties of Rhombus:", "\n",
+        "1) Side length (a)", "\n",
+        "2) Measure of obtuse angle (alpha)", "\n",
+        "3) Measure of acute angle (beta)"
+      );
+    }
+    length() {
+      console.log("Perimeter of a rhombus: ", 4 * this.a);
+    }
+    square() {
+      console.log(
+        "Area of the rhombus: ",
+        this.a * this.a * Math.sin((this.alpha * Math.PI) / 180)
+      );
+    }
+    info() {
+      console.log(
+        "Rhombus Information:", "\n",
+        "1) Side length: ", this.a, "\n",
+        "2) Measure of big angle: ", this.alpha, "degrees", "\n", // )
+        "3) Measure of small angle: ", this.beta, "degrees", "\n", // ))
+        "4) Sum of all sides: ", 4 * this.a, "\n",
+        "5) Area: ",
+        this.a * this.a * Math.sin((this.alpha * Math.PI) / 180)
+      );
+    }
+  }
