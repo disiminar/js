@@ -244,11 +244,11 @@ class Rhombus extends Square {
     info() {
       console.log(
         "Parallelogram Information:", "\n",
-        "1) Length = ",this.a, "\n",
-        "2) Width = ",this.b, "\n",
-        "3) Measure of obtuse angle = ", this.alpha, "degrees", "\n",
-        "4) Measure of acute angle = ", this.beta, "degrees", "\n",
-        "5) Sum of all sides = ", 2 * (this.a + this.b), "\n",
+        "1) Length: ",this.a, "\n",
+        "2) Width: ",this.b, "\n",
+        "3) Measure of obtuse angle: ", this.alpha, "degrees", "\n",
+        "4) Measure of acute angle: ", this.beta, "degrees", "\n",
+        "5) Sum of all sides: ", 2 * (this.a + this.b), "\n",
         "6) Area: ",
         this.a * this.b * Math.sin((this.alpha * Math.PI) / 180)
       );
