@@ -67,3 +67,16 @@ Truck.prototype.AssignDriver = function (name, nightDriving, experience) {
       experience: experience,
     };
   };
+
+  let Truck1 = new Truck("grey", 1520, 90, "Toyota", "Supra");
+  Truck1.AssignDriver("Oleh Zapukhliak", true, 2);
+  let Truck2 = new Truck("red", 1268, 85, "Honda", "Civic");
+  Truck2.AssignDriver("Oleh Zapukhliak", false, 3);
+
+  console.log("usage -> Truck1.drive():");
+  Truck1.trip();
+  console.log("usage -> Truck2.drive():");
+  Truck2.trip();
+
+
+
