@@ -297,11 +297,34 @@ const PaintRed = Painter("red");
 const PaintYellow = Painter("yellow");
 
 const obj1 = {
-    maxSpeed: 220,
-    type: "Truck",
-    color: "Green",
+    maxSpeed: 280,
+    type: "Sportcar",
+    color: "magenta",
   };
-  console.log("     Painting obj1");
+  console.log("Painting obj1:");
   PaintBlue(obj1);
   PaintRed(obj1);
   PaintYellow(obj1);
+  
+  const obj2 = {
+    type: "Truck",
+    avgSpeed: 90,
+    loadCapacity: 2400,
+  };
+  console.log("Painting obj2:");
+  PaintBlue(obj2);
+  PaintRed(obj2);
+  PaintYellow(obj2);
+  
+  const obj3 = {
+    maxSpeed: 180,
+    color: "purple",
+    isCar: true,
+  };
+  console.log("Painting obj3:");
+  PaintBlue(obj3);
+  PaintRed(obj3);
+  PaintYellow(obj3);
+
+
+  
