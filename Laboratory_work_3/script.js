@@ -43,6 +43,21 @@ function Truck(color, weight, avgSpeed, brand, model) {
     this.avgSpeed = avgSpeed;
     this.brand = brand;
     this.model = model;
+
+    this.trip = function () {
+        if (!this.hasOwnProperty("driver")) {
+          console.log("No driver assigned");
+        } else {
+          let message = "Driver " + this.driver.name;
+          if (this.driver.nightDriving) {
+            message += " drives at night";
+          } else {
+            message += " does not drive at night";
+          }
+          message += " and has " + this.driver.experience + " years of experience";
+          console.log(message);
+        }
+    }
 }
 
 Truck.prototype.AssignDriver = function (name, nightDriving, experience) {
