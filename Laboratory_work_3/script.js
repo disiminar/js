@@ -20,3 +20,10 @@ let car2 = {
                     "personal limitations": null
           }
 }
+
+//
+car1.drive = function () {
+    console.log("I am not driving at night");
+  };
+  console.log("usage -> car1.drive()");
+  car1.drive();
