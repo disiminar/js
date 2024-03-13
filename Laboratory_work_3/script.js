@@ -121,19 +121,19 @@ class Square {
 class Rectangle extends Square {
     constructor(a, b) {
         super(a);
-        this.b = b;
+        this._b = b;
     }
     get a() {
-        return this.a;
+        return this._a;
     }
     set a(p) {
-        this.a = p;
+        this._a = p;
     }
     get b(){
-        return this.b;
+        return this._b;
     }
     set b(p) {
-        this.b = p;
+        this._b = p;
     }
 
     static help() {
