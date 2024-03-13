@@ -115,6 +115,7 @@ class Rectangle extends Square {
     constructor(a, b) {
         super(a);
         this._b = b;
+        this._a = a;
     }
     get a() {
         return this._a;
@@ -201,6 +202,8 @@ class Rhombus extends Square {
       super(a, b);
       this.alpha = alpha;
       this.beta = beta;
+      this.a = a;
+      this.b = b;
     }
     static help() {
       console.log(
