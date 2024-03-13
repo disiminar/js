@@ -27,3 +27,12 @@ car1.drive = function () {
   };
   console.log("usage -> car1.drive()");
   car1.drive();
+
+  car2.drive = function () {
+    console.log("I can drive anytime");
+  };
+  console.log("usage -> car2.drive()");
+  car2.drive();
+//
+//
+
