@@ -117,3 +117,39 @@ class Square {
         );
       } 
 }
+
+class Rectangle extends Square {
+    constructor(a, b) {
+        super(a);
+        this.b = b;
+    }
+
+    static help() {
+    console.log(
+        "Rectangle information:", "\n",
+        "Opposite sides are equal, all angles = 90", "\n",
+        "1) Length of rectangle (a)", "\n",
+        "2) Width of rectangle (b)"
+        );
+    }
+    
+    length() {
+        console.log("Perimeter of a rectangle: ", 2 * (this.a + this.b));
+    }
+    
+    square() {
+        console.log("Area of the rectangle: ", this.a * this.b);
+    }
+
+    info() {
+        console.log(
+            "Rectangle Information:", "\n",
+            "1) Length: ", this.a, "\n",
+            "2) Width: ", this.b, "\n",
+            "3) All angles = 90 degrees", "\n",
+            "4) Sum of all sides: ", 2 * (this.a + this.b), "\n",
+            "5) Area: ", this.a * this.b
+        );
+      }
+
+}
