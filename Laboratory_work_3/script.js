@@ -266,3 +266,16 @@ const triangle2 = Triangular(6, 7, 8);
 console.log(triangle2);
 const triangle3 = Triangular(9, 10, 11);
 console.log(triangle3);
+
+function PiMultiplier(number) {
+    return function () {
+      return number * Math.PI;
+    };
+  }
+  //1.2.28
+  const doublePi = PiMultiplier(2);
+  console.log("2*pi = ", doublePi());
+  const Pi2_3 = PiMultiplier(2 / 3);
+  console.log("(2/3)*pi = ", Pi2_3());
+  const halfPi = PiMultiplier(1 / 2);
+  console.log("pi/2 = ", halfPi());
