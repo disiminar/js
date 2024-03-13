@@ -214,3 +214,45 @@ class Rhombus extends Square {
       );
     }
   }
+
+  class Parallelogram extends Rhombus {
+    constructor(a, b, alpha, beta) {
+      super(a, b);
+      this.alpha = alpha;
+      this.beta = beta;
+    }
+    static help() {
+      console.log(
+        "Opposite sides parallel", "\n",
+        "Properties of Parallelogram:", "\n",
+        "- Length of parallelogram (a)","\n",
+        "- Width of parallelogram (b)","\n",
+        "- Measure of obtuse angle (alpha)","\n",
+        "- Measure of acute angle (beta)"
+      );
+    }
+    length() {
+      console.log("Perimeter of parallelogram: ", 2 * (this.a + this.b));
+    }
+    square() {
+      console.log(
+        "Area of the parallelogram: ",
+        this.a * this.b * Math.sin((this.alpha * Math.PI) / 180)
+      );
+    }
+  
+    info() {
+      console.log(
+        "Parallelogram Information:", "\n",
+        "1) Length = ",this.a, "\n",
+        "2) Width = ",this.b, "\n",
+        "3) Measure of obtuse angle = ", this.alpha, "degrees", "\n",
+        "4) Measure of acute angle = ", this.beta, "degrees", "\n",
+        "5) Sum of all sides = ", 2 * (this.a + this.b), "\n",
+        "6) Area: ",
+        this.a * this.b * Math.sin((this.alpha * Math.PI) / 180)
+      );
+    }
+  }
+
+
