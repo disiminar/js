@@ -78,5 +78,42 @@ Truck.prototype.AssignDriver = function (name, nightDriving, experience) {
   console.log("usage -> Truck2.drive():");
   Truck2.trip();
 
+//es6
 
+class Square {
+    constructor(a) {
+        this.a = a;
+    }
+    static help() {
+        console.log(
+            "Square Properties:" + "\n" +
+            "1) All sides are equal in length" + "\n" +
+            "2) Opposite sides are parallel" + "\n" +
+            "3) All angles are 90 degrees"
+        );
+    }
 
+    length() {
+        console.log("Perimeter of a square: ", 4 * this.a);
+    }
+    
+    square() {
+        console.log("Area of the square: ", this.a * this.a);
+    }
+    info() {
+        console.log(
+          "Square Information:",
+          "\n",
+          "- Side lengths: ",
+          this.a,
+          "\n",
+          "- All angles = 90 degrees",
+          "\n",
+          "- Perimeter: ",
+          4 * this.a,
+          "\n",
+          "- Area: ",
+          this.a * this.a
+        );
+      } 
+}
